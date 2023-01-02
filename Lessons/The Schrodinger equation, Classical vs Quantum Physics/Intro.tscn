@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/fonts/DroidSansFallback.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Intro.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+size = 37
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 53
+outline_size = 2
+outline_color = Color( 0.960784, 0, 1, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 37
+outline_size = 1
+outline_color = Color( 0.313726, 1, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+fallback/0 = ExtResource( 2 )
+
+[node name="Intro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Writter" type="Label" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "(D. J. Griffiths)"
+align = 1
+
+[node name="Intro" type="Label" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.717647, 0.0196078, 1, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "
+Introduction to Quantum Mechanics"
+align = 1
+
+[node name="Label" type="Label" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 0.184314, 0.945098, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Chapter 1
+(The Wave Function)
+
+Topic 1
+(The Schrodinger Equation)"
+align = 1
+valign = 1

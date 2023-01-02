@@ -1,0 +1,243 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://FreeParticle.gd" type="Script" id=1]
+[ext_resource path="res://elements/curtain.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/themes/light/theme.tres" type="Theme" id=3]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_blend = true
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0.835294 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.462745, 0.462745, 0.462745, 1 )
+border_blend = true
+
+[node name="Ploter" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 1 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Graph" type="Panel" parent="."]
+margin_left = 27.0
+margin_top = 27.0
+margin_right = 375.0
+margin_bottom = 205.0
+custom_styles/panel = SubResource( 2 )
+
+[node name="Line2D" type="Line2D" parent="Graph"]
+position = Vector2( 10, 280 )
+points = PoolVector2Array( 320, -1 )
+width = 1.0
+default_color = Color( 0.0313726, 1, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 35.0
+margin_top = 204.0
+margin_right = 369.0
+margin_bottom = 235.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Wave function of a free electron in 1 dimention"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Button" type="Button" parent="."]
+margin_left = 123.0
+margin_top = 244.0
+margin_right = 275.0
+margin_bottom = 264.0
+text = "Wave function at t = 5"
+
+[node name="curtain" parent="." instance=ExtResource( 2 )]
+
+[node name="CloseCurtain" type="Button" parent="."]
+margin_left = 133.0
+margin_top = 422.0
+margin_right = 257.0
+margin_bottom = 442.0
+toggle_mode = true
+text = "Close Curtain"
+
+[node name="Ensemble" type="GridContainer" parent="."]
+margin_left = 417.0
+margin_top = 19.0
+margin_right = 709.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 292, 77 )
+columns = 2
+
+[node name="curtain" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 292.0
+margin_bottom = 77.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain2" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 296.0
+margin_top = 0.0
+margin_right = 588.0
+margin_bottom = 77.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain3" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_top = 81.0
+margin_right = 292.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain4" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 296.0
+margin_top = 81.0
+margin_right = 588.0
+margin_bottom = 158.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain5" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_top = 162.0
+margin_right = 292.0
+margin_bottom = 239.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain6" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 296.0
+margin_top = 162.0
+margin_right = 588.0
+margin_bottom = 239.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain7" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_top = 243.0
+margin_right = 292.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain8" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 296.0
+margin_top = 243.0
+margin_right = 588.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain9" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_top = 324.0
+margin_right = 292.0
+margin_bottom = 401.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain10" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 296.0
+margin_top = 324.0
+margin_right = 588.0
+margin_bottom = 401.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain11" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_top = 405.0
+margin_right = 292.0
+margin_bottom = 482.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain12" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 296.0
+margin_top = 405.0
+margin_right = 588.0
+margin_bottom = 482.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain13" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 0.0
+margin_top = 486.0
+margin_right = 292.0
+margin_bottom = 563.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="curtain14" parent="Ensemble" instance=ExtResource( 2 )]
+margin_left = 296.0
+margin_top = 486.0
+margin_right = 588.0
+margin_bottom = 563.0
+rect_min_size = Vector2( 292, 77 )
+other = true
+
+[node name="Cover" type="Panel" parent="."]
+margin_left = 417.0
+margin_top = 19.0
+margin_right = 1005.0
+margin_bottom = 582.0
+rect_min_size = Vector2( 292, 77 )
+mouse_filter = 1
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="Cover"]
+margin_left = 149.0
+margin_top = 246.0
+margin_right = 215.0
+margin_bottom = 260.0
+rect_scale = Vector2( 5, 5 )
+custom_colors/font_color = Color( 1, 0.858824, 0, 1 )
+text = "ENSEMBLE"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 114.0
+margin_top = 487.0
+margin_right = 279.0
+margin_bottom = 534.0
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 122.0
+margin_top = 548.0
+margin_right = 271.0
+margin_bottom = 571.0
+text = "New Experiment"
+
+[node name="Next" type="Button" parent="."]
+margin_left = 346.0
+margin_top = 557.0
+margin_right = 412.0
+margin_bottom = 580.0
+text = "Next Slide"
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="toggled" from="CloseCurtain" to="." method="_on_CloseCurtain_toggled"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]

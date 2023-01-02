@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/fonts/Roboto-Big.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/themes/light/theme.tres" type="Theme" id=2]
+[ext_resource path="res://assets/graphics/Plank.png" type="Texture" id=3]
+[ext_resource path="res://assets/fonts/Roboto-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/fonts/DroidSansFallback.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+outline_size = 1
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+fallback/0 = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+outline_size = 1
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+fallback/0 = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+outline_size = 1
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+fallback/0 = ExtResource( 5 )
+
+[node name="Schrodinger" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Plank" type="Sprite" parent="ColorRect"]
+position = Vector2( 634, 327 )
+texture = ExtResource( 3 )
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 396.0
+margin_top = 75.0
+margin_right = 653.0
+margin_bottom = 114.0
+theme_type_variation = "BigHeader"
+custom_fonts/font = SubResource( 1 )
+text = "What was that ?!?!"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 234.0
+margin_top = 253.0
+margin_right = 491.0
+margin_bottom = 292.0
+theme_type_variation = "BigHeader"
+custom_fonts/font = SubResource( 2 )
+text = "Schrodinger Equation :"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 173.0
+margin_top = 363.0
+margin_right = 494.0
+margin_bottom = 402.0
+theme_type_variation = "BigHeader"
+custom_fonts/font = SubResource( 3 )
+text = "Plank's Consant (Modified) :"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 204.0
+margin_top = 119.0
+margin_right = 798.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 1 )
+text = "The wave we drew earlier is called a \"Wave Function\",
+We find it using the \"Schrodinger Equation\""
+align = 1
+valign = 1
